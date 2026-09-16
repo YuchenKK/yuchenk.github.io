@@ -178,9 +178,8 @@ h3 {
 
 .research-image {
     width: 100%;
-    height: 200px;
-
-    background: #eee;
+    height: auto;
+    min-height: 200px;
 
     display: flex;
     align-items: center;
@@ -190,16 +189,10 @@ h3 {
     overflow: hidden;
 }
 
-
-/*
-   THIS CONTROLS THE ACTUAL IMAGE
-   INSIDE THE BOX.
-*/
-
 .research-image img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    display: block;
 }
 
 
