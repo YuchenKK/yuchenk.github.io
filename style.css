@@ -1,38 +1,57 @@
-/* ===== General ===== */
+/* ========================================
+   GLOBAL
+   ======================================== */
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    background: #fff;
 }
 
 .container {
     width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1050px;
+    margin: auto;
 }
 
-/* ===== Navigation ===== */
+section {
+    padding: 70px 0;
+}
+
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
 nav {
-    background-color: #222;
-    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
 }
 
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
 }
 
-nav h1 {
-    color: white;
-    font-size: 1.4rem;
+.nav-name {
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 nav ul {
@@ -42,133 +61,265 @@ nav ul {
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    font-size: 0.95rem;
+    color: #333;
 }
 
 nav a:hover {
-    color: #4da6ff;
+    color: #666;
 }
 
-/* ===== Hero / About ===== */
-.hero {
-    padding: 80px 0;
-    background-color: #f5f7fa;
-}
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
+/* ========================================
+   HEADINGS
+   ======================================== */
 
-.profile-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.research-image {
-    width: 180px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.hero h2 {
-    font-size: 2.2rem;
+h1 {
+    font-size: 2.8rem;
     margin-bottom: 10px;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* ===== Sections ===== */
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    color: #222;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
-
-/* ===== Education ===== */
-.education-item {
+h2 {
+    font-size: 2rem;
     margin-bottom: 30px;
 }
 
-.education-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+h3 {
+    margin-bottom: 10px;
 }
 
-.education-item .date {
-    color: #777;
-    font-size: 0.9rem;
+
+/* ========================================
+   HERO / ABOUT
+   ======================================== */
+
+.hero {
+    padding: 100px 0 80px;
+    background: #f7f7f7;
 }
 
-/* ===== Research & Publications ===== */
-.publication {
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #666;
     margin-bottom: 25px;
 }
 
-.publication h3 {
-    font-size: 1.1rem;
+
+/* Profile photo */
+
+.profile-placeholder {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* If you replace the placeholder with an actual image */
+
+.profile-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ========================================
+   RESEARCH & PUBLICATIONS
+   ======================================== */
+
+.research-item {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 35px;
+    padding: 35px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.research-item:last-child {
+    border-bottom: none;
+}
+
+
+/* Research image */
+
+.research-image {
+    width: 100%;
+    height: 200px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* If you use an actual research image */
+
+.research-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.research-description {
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   PUBLICATION
+   ======================================== */
+
+.publication {
+    margin-top: 20px;
+    padding: 18px 20px;
+    background: #f7f7f7;
+    border-left: 3px solid #555;
+}
+
+.publication-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.publication-title {
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
-.publication p {
-    color: #555;
-}
-
-.publication a {
-    color: #0066cc;
+.publication-links a,
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 7px 14px;
+    border: 1px solid #333;
+    border-radius: 4px;
     text-decoration: none;
+    color: #333;
 }
 
-.publication a:hover {
-    text-decoration: underline;
+.publication-links a:hover,
+.button:hover {
+    background: #333;
+    color: white;
 }
 
-/* ===== Research Interests ===== */
-.research-list {
+
+/* ========================================
+   PROJECTS
+   ======================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+/* PROJECT IMAGE SIZE
+   ----------------------------------------
+   Change width/height here
+*/
+
+.project-image {
+    width: 100%;
+    height: 200px;
+
+    background: #eee;
+
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style: none;
-}
+    align-items: center;
+    justify-content: center;
 
-.research-list li {
-    background-color: #f0f2f5;
-    padding: 8px 15px;
+    color: #777;
+
+    margin-bottom: 15px;
     border-radius: 5px;
+
+    overflow: hidden;
 }
 
-/* ===== Contact ===== */
-.contact a {
-    color: #0066cc;
-    text-decoration: none;
+
+/* If you replace the placeholder with
+   an actual project image */
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* ===== Footer ===== */
+
+/* ========================================
+   CV
+   ======================================== */
+
+.cv-section {
+    background: #f7f7f7;
+}
+
+
+/* ========================================
+   CONTACT
+   ======================================== */
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.contact-links a {
+    margin-right: 20px;
+    color: #333;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
 footer {
-    background-color: #222;
-    color: #aaa;
+    padding: 30px 0;
     text-align: center;
-    padding: 25px 0;
-    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+    color: #777;
 }
 
-/* ===== Mobile ===== */
-@media (max-width: 700px) {
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 750px) {
 
     nav .container {
         flex-direction: column;
@@ -176,23 +327,35 @@ footer {
     }
 
     nav ul {
-        gap: 15px;
+        gap: 12px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .hero-content {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: 1fr;
     }
 
-    .hero {
-        padding: 50px 0;
+    .profile-placeholder {
+        margin: auto;
     }
 
-    section {
-        padding: 40px 0;
+    .research-item {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .project-image {
+        height: 220px;
     }
 }
+
 
 
