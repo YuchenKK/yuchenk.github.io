@@ -1,3 +1,4 @@
+```css
 /* ========================================
    GLOBAL
    ======================================== */
@@ -116,23 +117,26 @@ h3 {
 }
 
 
-/* Profile photo */
+/* Profile photo placeholder */
 
 .profile-placeholder {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     background: #ddd;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: #777;
     text-align: center;
+
     overflow: hidden;
 }
 
 
-/* If you replace the placeholder with an actual image */
+/* If you later add an actual profile image */
 
 .profile-placeholder img {
     width: 100%;
@@ -149,7 +153,9 @@ h3 {
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 35px;
+
     padding: 35px 0;
+
     border-bottom: 1px solid #ddd;
 }
 
@@ -158,28 +164,56 @@ h3 {
 }
 
 
-/* Research image */
+/* ========================================
+   RESEARCH IMAGE
+   ======================================== */
+
+/*
+   THIS CONTROLS THE SIZE OF YOUR
+   RESEARCH IMAGES.
+
+   Change height: 200px if you want
+   them taller or shorter.
+*/
 
 .research-image {
     width: 100%;
     height: 200px;
+
     background: #eee;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #777;
+
     border-radius: 5px;
     overflow: hidden;
 }
 
 
-/* If you use an actual research image */
+/*
+   THIS CONTROLS THE ACTUAL IMAGE
+   INSIDE THE BOX.
+*/
 
 .research-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
+
+
+/*
+   If you want the images to fill the
+   entire box and crop slightly, use:
+
+   object-fit: cover;
+*/
+
+
+/* ========================================
+   RESEARCH DESCRIPTION
+   ======================================== */
 
 .research-description {
     margin-bottom: 20px;
@@ -193,6 +227,7 @@ h3 {
 .publication {
     margin-top: 20px;
     padding: 18px 20px;
+
     background: #f7f7f7;
     border-left: 3px solid #555;
 }
@@ -201,23 +236,33 @@ h3 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+
     color: #777;
+
     margin-bottom: 6px;
 }
 
 .publication-title {
+    font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+
+/* Publication buttons */
+
 .publication-links a,
 .button {
     display: inline-block;
+
     margin-top: 10px;
     margin-right: 8px;
+
     padding: 7px 14px;
+
     border: 1px solid #333;
     border-radius: 4px;
+
     text-decoration: none;
     color: #333;
 }
@@ -226,57 +271,6 @@ h3 {
 .button:hover {
     background: #333;
     color: white;
-}
-
-
-/* ========================================
-   PROJECTS
-   ======================================== */
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.project-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-
-/* PROJECT IMAGE SIZE
-   ----------------------------------------
-   Change width/height here
-*/
-
-.project-image {
-    width: 100%;
-    height: 200px;
-
-    background: #eee;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #777;
-
-    margin-bottom: 15px;
-    border-radius: 5px;
-
-    overflow: hidden;
-}
-
-
-/* If you replace the placeholder with
-   an actual project image */
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 
@@ -309,8 +303,11 @@ h3 {
 
 footer {
     padding: 30px 0;
+
     text-align: center;
+
     border-top: 1px solid #ddd;
+
     color: #777;
 }
 
@@ -344,18 +341,17 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    /*
+       Research images become wider
+       on mobile screens.
+    */
+
+    .research-image {
+        height: 250px;
     }
 
     h1 {
         font-size: 2.2rem;
     }
-
-    .project-image {
-        height: 220px;
-    }
 }
-
-
-
+```
