@@ -157,6 +157,7 @@ h3 {
     padding: 35px 0;
 
     border-bottom: 1px solid #ddd;
+    align-items: start;
 }
 
 .research-item:last-child {
