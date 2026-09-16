@@ -49,15 +49,21 @@ a:hover {
     text-decoration: underline;
 }
 
-.publication {
+..publication {
     display: flex;
+    align-items: center;
     gap: 25px;
     margin: 25px 0;
 }
 
 .publication img {
-    width: 200px;
+    width: 220px;
+    height: 140px;
     object-fit: contain;
+}
+
+.publication-info {
+    flex: 1;
 }
 
 .research-item {
