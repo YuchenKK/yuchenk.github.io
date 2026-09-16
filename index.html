@@ -1,35 +1,559 @@
-<h2>Yuchen Kang</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuchen [Last Name] | Soft Robotics Researcher</title>
 
-    <p>
-        Reviewer: RSS, IEEE RA-L
-    </p>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<h2>Teaching</h2>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <p>
-        Boston University
-    </p>
-<h2>Publications</h2>
-</div>
-<img src="images/sdt.png" alt="science_paper">
-<div class="publication">
-    <img src="images/sciadv.2023.9.issue-43.cover.gif" alt="science_paper">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
 
-    <div class="publication-info">
-        <strong>A multifunctional soft robot for cardiac interventions</strong>
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
 
-        <p>
-            Jacob Rogatinsky, Dominic Recco, Joseph Feichtmeier, Yuchen Kang, Nicholas Kneier, Peter Hammer, Edward O’Leary, Douglas Mah, David Hoganson, Nikolay V Vasilyev, Tommaso Ranzani
-        </p>
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
 
-        <p>
-            Science Advances VOL.9 NO.43
-        </p>
+        .nav-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
 
-        <a href="#">Paper</a> /https://www.science.org/doi/full/10.1126/sciadv.adi5559
-        <!-- <a href="#">Code</a> /
-        <a href="#">Project</a> -->
-    </div>
-</div>
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #666;
+        }
+
+        /* General layout */
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Hero / About */
+        .hero {
+            padding: 100px 0 80px;
+            background: #f7f7f7;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .profile-placeholder {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            text-align: center;
+        }
+
+        /* Research */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .research-card {
+            border: 1px solid #ddd;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .research-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Publications */
+        .publication {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .publication-links a,
+        .button {
+            display: inline-block;
+            margin-top: 12px;
+            margin-right: 8px;
+            padding: 7px 14px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .publication-links a:hover,
+        .button:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .project-image {
+            height: 150px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* CV / Contact */
+        .cv-section {
+            background: #f7f7f7;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            margin-right: 20px;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            color: #777;
+        }
+
+        /* Mobile */
+        @media (max-width: 750px) {
+            nav .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-placeholder {
+                margin: auto;
+            }
+
+            .research-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-name">Yuchen [Last Name]</div>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- About / Hero -->
+    <section id="about" class="hero">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <h1>Yuchen [Last Name]</h1>
+
+                <p class="hero-subtitle">
+                    Ph.D. Student in Mechanical Engineering<br>
+                    University of Massachusetts Amherst
+                </p>
+
+                <p>
+                    I am a Ph.D. student in Mechanical Engineering at the
+                    University of Massachusetts Amherst. My research focuses
+                    on soft robotics, compliant mechanisms, and mechanically
+                    intelligent structures.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    My work explores the design of soft robotic systems,
+                    pneumatic soft actuators, variable stiffness, and
+                    structural reinforcement for soft robots.
+                </p>
+            </div>
+
+            <!-- Replace this with your profile photo -->
+            <div class="profile-placeholder">
+                Profile Photo
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Research -->
+    <section id="research">
+        <div class="container">
+
+            <h2>Research</h2>
+
+            <div class="research-grid">
+
+                <div class="research-card">
+                    <div class="research-image">
+                        Research Image 1
+                    </div>
+
+                    <h3>Soft Robotic Arms</h3>
+
+                    <p>
+                        Design and structural reinforcement of soft robotic
+                        arms for improved stiffness and load-bearing capability
+                        while preserving their deformation and actuation
+                        capabilities.
+                    </p>
+                </div>
+
+
+                <div class="research-card">
+                    <div class="research-image">
+                        Research Image 2
+                    </div>
+
+                    <h3>Soft Actuators</h3>
+
+                    <p>
+                        Design and characterization of pneumatic soft
+                        actuators, including McKibben actuators and
+                        fluid-driven soft robotic systems.
+                    </p>
+                </div>
+
+
+                <div class="research-card">
+                    <div class="research-image">
+                        Research Image 3
+                    </div>
+
+                    <h3>Variable Stiffness</h3>
+
+                    <p>
+                        Mechanical approaches for controlling and increasing
+                        the stiffness of soft robotic systems without
+                        sacrificing their useful deformation modes.
+                    </p>
+                </div>
+
+
+                <div class="research-card">
+                    <div class="research-image">
+                        Research Image 4
+                    </div>
+
+                    <h3>Compliant Mechanical Structures</h3>
+
+                    <p>
+                        Development of compliant structures and mechanisms
+                        that provide mechanical support while maintaining
+                        desired degrees of freedom.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Publications -->
+    <section id="publications">
+        <div class="container">
+
+            <h2>Selected Publications</h2>
+
+            <div class="publication">
+
+                <div class="publication-title">
+                    [Your Paper Title]
+                </div>
+
+                <p>
+                    Yuchen [Last Name], [Co-author Name], and [Co-author Name]
+                </p>
+
+                <p>
+                    <em>IEEE Robotics and Automation Letters</em>, 2026
+                </p>
+
+                <div class="publication-links">
+                    <a href="#" target="_blank">Paper</a>
+                    <a href="#" target="_blank">Video</a>
+                    <a href="#" target="_blank">Code</a>
+                </div>
+
+            </div>
+
+
+            <div class="publication">
+
+                <div class="publication-title">
+                    [Another Publication Title]
+                </div>
+
+                <p>
+                    Yuchen [Last Name], [Co-author Name]
+                </p>
+
+                <p>
+                    [Journal / Conference], [Year]
+                </p>
+
+                <div class="publication-links">
+                    <a href="#" target="_blank">Paper</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        Project Image
+                    </div>
+
+                    <h3>Soft Robotic Arm</h3>
+
+                    <p>
+                        A fluid-driven soft robotic arm with a passive
+                        extensible central backbone for stiffness-pressure
+                        decoupling.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        Project Image
+                    </div>
+
+                    <h3>McKibben Actuator</h3>
+
+                    <p>
+                        Design and characterization of pneumatic artificial
+                        muscles for soft robotic applications.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        Project Image
+                    </div>
+
+                    <h3>[Future Project]</h3>
+
+                    <p>
+                        Add another research project, class project, or
+                        engineering project here.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CV -->
+    <section id="cv" class="cv-section">
+        <div class="container">
+
+            <h2>Curriculum Vitae</h2>
+
+            <p>
+                Download my CV for a detailed overview of my research,
+                education, publications, and experience.
+            </p>
+
+            <!-- Put your CV PDF in the same repository -->
+            <a class="button" href="files/Yuchen_CV.pdf" target="_blank">
+                Download CV
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+
+            <h2>Contact</h2>
+
+            <p>
+                I am always happy to discuss research, collaboration,
+                and opportunities in soft robotics.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:your-email@umass.edu">Email</a>
+
+                <a href="https://github.com/yourusername" target="_blank">
+                    GitHub
+                </a>
+
+                <a href="#" target="_blank">
+                    Google Scholar
+                </a>
+
+                <a href="#" target="_blank">
+                    LinkedIn
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            © 2026 Yuchen [Last Name]. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>
