@@ -96,7 +96,8 @@ h3 {
 
 .hero {
     padding: 100px 0 80px;
-    background: #f7f7f7;
+    /* background: #f7f7f7;*/
+    background: #dcebd1
 }
 
 .hero-content {
