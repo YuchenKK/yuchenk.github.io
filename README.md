@@ -1,18 +1,11 @@
-# yuchenk.github.io
+yuchenk.github.io
 │
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
+├── style.css
+├── cv.pdf
 │
-├── images/
-│   ├── profile.jpg
-│   ├── research/
-│   ├── publications/
-│   └── projects/
-│
-├── files/
-│   └── Zijian_Guo_CV.pdf
-│
-└── README.md
+└── images/
+    ├── profile.jpg
+    ├── paper1.png
+    ├── paper2.png
+    └── project1.png
