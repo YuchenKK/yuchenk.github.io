@@ -122,8 +122,8 @@ h3 {
 .profile-placeholder {
     width: 220px;
     height: 220px;
-    border-radius: 50%;
-    background: #ddd;
+    /* border-radius: 50%; */
+    /* background: #ddd; */
 
     display: flex;
     align-items: center;
