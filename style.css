@@ -180,7 +180,7 @@ h3 {
 
 .research-image {
     width: 280px;
-    height: 200px;
+    height: 320px;
     background: #eee;
     display: flex;
     align-items: center;
@@ -191,7 +191,7 @@ h3 {
 
 .research-image img {
     width: 80%;
-    height: 200px;
+    height: 320px;
     object-fit: contain;
     display: block;
 }
