@@ -119,6 +119,72 @@
             text-align: center;
         }
 
+        /* Research & Publications */
+        .research-item {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 35px;
+            padding: 35px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .research-item:last-child {
+            border-bottom: none;
+        }
+
+        .research-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            border-radius: 5px;
+        }
+
+        .research-description {
+            margin-bottom: 20px;
+        }
+
+        .publication {
+            margin-top: 20px;
+            padding: 18px 20px;
+            background: #f7f7f7;
+            border-left: 3px solid #555;
+        }
+
+        .publication-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #777;
+            margin-bottom: 6px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .publication-links a,
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 8px;
+            padding: 7px 14px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .publication-links a:hover,
+        .button:hover {
+            background: #333;
+            color: white;
+        }
+
         /* Research */
         .research-grid {
             display: grid;
@@ -244,7 +310,10 @@
                 margin: auto;
             }
 
-            .research-grid,
+            .research-item {
+                grid-template-columns: 1fr;
+            }
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -265,8 +334,7 @@
 
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
+                <li><a href="#research">Research &amp; Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -310,126 +378,86 @@
     </section>
 
 
-    <!-- Research -->
+    <!-- Research & Publications -->
     <section id="research">
         <div class="container">
 
-            <h2>Research</h2>
+            <h2>Research &amp; Publications</h2>
 
-            <div class="research-grid">
-
-                <div class="research-card">
-                    <div class="research-image">
-                        Research Image 1
-                    </div>
-
+            <div class="research-item">
+                <div class="research-image">Research Image 1</div>
+                <div>
                     <h3>Soft Robotic Arms</h3>
-
-                    <p>
-                        Design and structural reinforcement of soft robotic
-                        arms for improved stiffness and load-bearing capability
-                        while preserving their deformation and actuation
-                        capabilities.
+                    <p class="research-description">
+                        Design and structural reinforcement of soft robotic arms for improved stiffness and load-bearing capability while preserving their deformation and actuation capabilities.
                     </p>
-                </div>
-
-
-                <div class="research-card">
-                    <div class="research-image">
-                        Research Image 2
+                    <div class="publication">
+                        <div class="publication-label">Publication</div>
+                        <div class="publication-title">[Your Paper Title]</div>
+                        <p>Yuchen [Last Name], [Co-author Name], and [Co-author Name]</p>
+                        <p><em>IEEE Robotics and Automation Letters</em>, 2026</p>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Paper</a>
+                            <a href="#" target="_blank">Video</a>
+                            <a href="#" target="_blank">Code</a>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <h3>Soft Actuators</h3>
-
-                    <p>
-                        Design and characterization of pneumatic soft
-                        actuators, including McKibben actuators and
-                        fluid-driven soft robotic systems.
+            <div class="research-item">
+                <div class="research-image">Research Image 2</div>
+                <div>
+                    <h3>Pneumatic Soft Actuators</h3>
+                    <p class="research-description">
+                        Design and characterization of pneumatic soft actuators, including McKibben actuators and fluid-driven soft robotic systems.
                     </p>
-                </div>
-
-
-                <div class="research-card">
-                    <div class="research-image">
-                        Research Image 3
+                    <div class="publication">
+                        <div class="publication-label">Publication</div>
+                        <div class="publication-title">[Another Publication Title]</div>
+                        <p>Yuchen [Last Name], [Co-author Name]</p>
+                        <p>[Journal / Conference], [Year]</p>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Paper</a>
+                        </div>
                     </div>
+                </div>
+            </div>
 
+            <div class="research-item">
+                <div class="research-image">Research Image 3</div>
+                <div>
                     <h3>Variable Stiffness</h3>
-
-                    <p>
-                        Mechanical approaches for controlling and increasing
-                        the stiffness of soft robotic systems without
-                        sacrificing their useful deformation modes.
+                    <p class="research-description">
+                        Mechanical approaches for controlling and increasing the stiffness of soft robotic systems without sacrificing their useful deformation modes.
                     </p>
-                </div>
-
-
-                <div class="research-card">
-                    <div class="research-image">
-                        Research Image 4
+                    <div class="publication">
+                        <div class="publication-label">Related Work</div>
+                        <div class="publication-title">[Add Related Publication]</div>
+                        <p>[Authors], [Journal / Conference], [Year]</p>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Paper</a>
+                        </div>
                     </div>
+                </div>
+            </div>
 
+            <div class="research-item">
+                <div class="research-image">Research Image 4</div>
+                <div>
                     <h3>Compliant Mechanical Structures</h3>
-
-                    <p>
-                        Development of compliant structures and mechanisms
-                        that provide mechanical support while maintaining
-                        desired degrees of freedom.
+                    <p class="research-description">
+                        Development of compliant structures and mechanisms that provide mechanical support while maintaining desired degrees of freedom.
                     </p>
+                    <div class="publication">
+                        <div class="publication-label">Related Work</div>
+                        <div class="publication-title">[Add Related Publication]</div>
+                        <p>[Authors], [Journal / Conference], [Year]</p>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Paper</a>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Publications -->
-    <section id="publications">
-        <div class="container">
-
-            <h2>Selected Publications</h2>
-
-            <div class="publication">
-
-                <div class="publication-title">
-                    [Your Paper Title]
-                </div>
-
-                <p>
-                    Yuchen [Last Name], [Co-author Name], and [Co-author Name]
-                </p>
-
-                <p>
-                    <em>IEEE Robotics and Automation Letters</em>, 2026
-                </p>
-
-                <div class="publication-links">
-                    <a href="#" target="_blank">Paper</a>
-                    <a href="#" target="_blank">Video</a>
-                    <a href="#" target="_blank">Code</a>
-                </div>
-
-            </div>
-
-
-            <div class="publication">
-
-                <div class="publication-title">
-                    [Another Publication Title]
-                </div>
-
-                <p>
-                    Yuchen [Last Name], [Co-author Name]
-                </p>
-
-                <p>
-                    [Journal / Conference], [Year]
-                </p>
-
-                <div class="publication-links">
-                    <a href="#" target="_blank">Paper</a>
-                </div>
-
             </div>
 
         </div>
