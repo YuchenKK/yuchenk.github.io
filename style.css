@@ -136,7 +136,7 @@ h3 {
 .bio-link,
 .bio-link:visited {
     color: #0a3323;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* Profile photo placeholder */
