@@ -135,12 +135,12 @@ h3 {
 }
 
 .hero-subtitle a:hover {
-    color: #f9e4c5;
+    color: #839958;
 }
 
 .bio-link,
 .bio-link:visited {
-    color: #f9e4c5;
+    color: #839958;
     text-decoration: underline;
 }
 
@@ -189,6 +189,7 @@ h3 {
 }
 
 .research-item:last-child {
+   color: #666;
     border-bottom: none;
 }
 
@@ -238,6 +239,7 @@ h3 {
 
 .research-description {
     margin-bottom: 20px;
+   color: #666;
     font-family: Arial, Helvetica, sans-serif;
 }
 
