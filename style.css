@@ -17,7 +17,7 @@ body {
     font-family: Georgia, Helvetica, sans-serif;
    /* Helvetica, */
     line-height: 1.6;
-    color: #0a3323;
+    color: #f9e4c5;
     background: #fff;
 }
 
@@ -113,7 +113,7 @@ h3 {
 .hero {
     padding: 100px 0 80px;
     /* background: #f7f7f7;*/
-    background: #d7e6db
+    background: #6c8ca8
 }
 
 .hero-content {
@@ -130,17 +130,17 @@ h3 {
 .hero-subtitle a,
 .hero-subtitle a:visited{
     font-size: 1.25rem;
-    color: #0a3323;
+    color: #f9e4c5;
     margin-bottom: 25px;
 }
 
 .hero-subtitle a:hover {
-    color: #0a3323;
+    color: #f9e4c5;
 }
 
 .bio-link,
 .bio-link:visited {
-    color: #0a3323;
+    color: #f9e4c5;
     text-decoration: underline;
 }
 
