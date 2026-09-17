@@ -93,21 +93,21 @@ h3 {
 /* ========================================
    HERO / ABOUT
    ======================================== */
-.title-name {
+/* .title-name {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 48px;
     font-weight: 700;
     font-style: italic;
     color: #105666;
-}
+} */
 
-.profile-name {
+/* .profile-name {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #105666;
-}
+} */
 
 .hero {
     padding: 100px 0 80px;
