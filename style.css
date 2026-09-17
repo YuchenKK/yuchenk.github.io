@@ -128,13 +128,13 @@ h3 {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: #666;
+    color: #0a3323;
     margin-bottom: 25px;
 }
 
 .bio-link,
 .bio-link:visited {
-    color: #315bd6;
+    color: #0a3323;
     text-decoration: none;
 }
 
