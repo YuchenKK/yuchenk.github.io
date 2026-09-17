@@ -93,6 +93,14 @@ h3 {
 /* ========================================
    HERO / ABOUT
    ======================================== */
+.title-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    color: #105666;
+}
+
 .profile-name {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 3rem;
