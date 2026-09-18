@@ -256,6 +256,7 @@ h3 {
 .publication {
     margin-top: 20px;
     padding: 18px 20px;
+    color: #777;
 
     background: #f7f7f7;
     border-left: 3px solid #555;
@@ -272,7 +273,7 @@ h3 {
 }
 
 .publication-title {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     /* font-weight: bold; */
     color: #777;
     margin-bottom: 6px;
