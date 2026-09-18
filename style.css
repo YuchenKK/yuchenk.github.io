@@ -338,10 +338,11 @@ h3 {
 .service-list li {
     margin-bottom: 5px;
     padding-left: 3px;
+    color: #425669;
 }
 
 .service-list li::marker {
-    color: #777;
+    color: #425669;
 }
 /* ========================================
    FOOTER
