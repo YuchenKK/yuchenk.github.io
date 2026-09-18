@@ -330,6 +330,19 @@ h3 {
 }
 
 
+.service-list {
+    padding-left: 30px;
+    margin: 0;
+}
+
+.service-list li {
+    margin-bottom: 5px;
+    padding-left: 3px;
+}
+
+.service-list li::marker {
+    color: #777;
+}
 /* ========================================
    FOOTER
    ======================================== */
