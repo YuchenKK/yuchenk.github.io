@@ -17,7 +17,8 @@ body {
     font-family: Georgia, Helvetica, sans-serif;
    /* Helvetica, */
     line-height: 1.6;
-    color: #f9e4c5;
+    /* color: #f9e4c5; */
+    color: #333;
     background: #fff;
 }
 
@@ -125,18 +126,19 @@ h3 {
 
 .hero-text {
     max-width: 700px;
+    color: #f9e4c5;
 }
 
 .hero-subtitle a,
 .hero-subtitle a:visited{
     font-size: 1.25rem;
-    color: #f9e4c5;
+    color: #f8ba57;
     margin-bottom: 25px;
 }
 
-.hero-subtitle a:hover {
+/* .hero-subtitle a:hover {
     color: #839958;
-}
+} */
 
 .bio-link,
 .bio-link:visited {
